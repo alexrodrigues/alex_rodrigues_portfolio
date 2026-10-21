@@ -1,0 +1,11 @@
+node_modules
+.next
+out
+.env.local
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts
+coverage
+
+# internal working notes / design process artifacts — not for the public repo
+.design-reference/
