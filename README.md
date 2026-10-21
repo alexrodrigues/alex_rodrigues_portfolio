@@ -1,6 +1,15 @@
 # Alex Rodrigues Portfolio
 
+![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38BDF8?logo=tailwindcss&logoColor=white)
+![Vitest](https://img.shields.io/badge/Vitest-tested-6E9F18?logo=vitest&logoColor=white)
+
 Alex Rodrigues is a Senior/Staff Mobile & AI Engineer (iOS, Android, Flutter, Kotlin Multiplatform, RAG/LLM/retrieval engineering) who shares his professional journey and projects through a single-page portfolio website.
+
+![Hero section](.github/readme/hero.jpg)
+![Projects section](.github/readme/projects.jpg)
 
 ## Tech stack
 
