@@ -259,12 +259,16 @@ export const contactHeadline = "Let's build something that survives contact with
 export const contactSubline =
   "Whether you need high-precision retrieval systems, agentic developer tooling, or battle-tested staff mobile architecture.";
 
+const whatsappNumber = "5511968312375"; // +55 11 96831-2375, digits only
+const whatsappMessage = "Hi Alex, I saw your portfolio and I'd like to talk about...";
+export const whatsappHref = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
 export const contactLinks: ContactLink[] = [
   {
-    command: "$ mailto",
-    label: "alex.rodrigues.developer@gmail.com",
-    href: "mailto:alex.rodrigues.developer@gmail.com",
-    icon: "mail",
+    command: "$ open",
+    label: "wa.me/5511968312375",
+    href: whatsappHref,
+    icon: "whatsapp",
   },
   {
     command: "$ open",

@@ -1,4 +1,5 @@
-import { contactHeadline, contactSubline, contactLinks } from "@/data/content";
+import { contactHeadline, contactSubline, contactLinks, whatsappHref } from "@/data/content";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 
 export function Contact() {
   return (
@@ -31,20 +32,26 @@ export function Contact() {
                   {link.label}
                 </div>
               </div>
-              <span className="material-symbols-outlined shrink-0 text-outline group-hover:text-primary-container">
-                {link.icon}
-              </span>
+              {link.icon === "whatsapp" ? (
+                <WhatsAppIcon className="h-5 w-5 shrink-0 text-outline transition-colors group-hover:text-primary-container" />
+              ) : (
+                <span className="material-symbols-outlined shrink-0 text-outline group-hover:text-primary-container">
+                  {link.icon}
+                </span>
+              )}
             </a>
           ))}
         </div>
 
         <div className="pt-2">
           <a
-            href="mailto:alex.rodrigues.developer@gmail.com"
+            href={whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
             className="cyan-glow inline-flex items-center gap-2 rounded bg-primary-container px-8 py-3 font-headline text-headline-sm font-bold text-on-primary-container transition-all duration-150 hover:bg-surface-tint active:scale-95"
           >
-            <span>Email Me</span>
-            <span className="material-symbols-outlined text-lg">send</span>
+            <span>Send a WhatsApp</span>
+            <WhatsAppIcon className="h-5 w-5" />
           </a>
         </div>
       </div>

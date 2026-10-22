@@ -4,7 +4,8 @@ export default function Document() {
   return (
     <Html lang="en" className="dark scroll-smooth">
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="theme-color" content="#0a0e17" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
