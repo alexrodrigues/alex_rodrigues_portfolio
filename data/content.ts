@@ -65,8 +65,8 @@ export interface ProjectEntry {
   status: string;
   description: string;
   tags: string[];
-  linkLabel: string;
-  linkHref: string;
+  linkLabel?: string;
+  linkHref?: string;
 }
 
 export interface ContactLink {
@@ -127,7 +127,15 @@ export const about: AboutContent = {
     {
       index: "02",
       title: "Mobile",
-      tags: ["Kotlin · Jetpack Compose", "Swift · SwiftUI", "Flutter · Dart", "Kotlin Multiplatform"],
+      tags: [
+        "Kotlin · Jetpack Compose",
+        "Swift · SwiftUI",
+        "Flutter · Dart",
+        "Kotlin Multiplatform",
+        "Real-time Geolocation",
+        "Offline-First (Hive / Room / Core Data)",
+        "Camera, OCR & Biometric Capture",
+      ],
     },
     {
       index: "03",
@@ -177,8 +185,8 @@ export const experience: ExperienceEntry[] = [
     org: "XP Inc.",
     dateRange: "Jun 2019 – Oct 2023",
     description:
-      "Co-led XP's Credit Card app from scratch on iOS and Android, MVP in three months during the pandemic. Promoted to Staff Engineer with a cross-tribe mandate; grew the next generation of mobile engineers org-wide.",
-    tags: ["Fintech Credit Card", "Staff Leadership", "iOS / Android"],
+      "Co-led XP's Credit Card app from scratch on iOS and Android, MVP in three months during the pandemic. Also built camera-based facial biometric authentication for secure logins, and the offline-first message-persistence layer (on-device storage on iOS and Android) for a live in-app advisor chat feature. Promoted to Staff Engineer with a cross-tribe mandate; grew the next generation of mobile engineers org-wide.",
+    tags: ["Fintech Credit Card", "Staff Leadership", "iOS / Android", "Biometric Auth", "Offline Sync"],
   },
   {
     id: "sky-brasil",
@@ -197,8 +205,8 @@ export const experience: ExperienceEntry[] = [
     org: "Bradesco",
     dateRange: "Nov 2015 – Jul 2016",
     description:
-      "Built OTP and secure tokenization for a major Brazilian bank's retail iOS app; engineered remote cheque deposit.",
-    tags: ["Banking Security", "OTP Tokenization"],
+      "Built OTP and secure tokenization for a major Brazilian bank's retail iOS app; engineered remote cheque deposit (camera capture) and barcode scanning for utility bill payments.",
+    tags: ["Banking Security", "OTP Tokenization", "Camera/OCR Capture"],
   },
   {
     id: "prodesp",
@@ -214,6 +222,16 @@ export const experience: ExperienceEntry[] = [
 
 export const projects: ProjectEntry[] = [
   {
+    title: "Minsky",
+    badge: "Open-Source RAG Engine · Live Demo",
+    status: "status: online",
+    description:
+      "A local-first RAG engine designed and built end-to-end: AST-aware chunking (tree-sitter) across a dozen languages, an embedded vector store (LanceDB) over local embeddings so no source code ever leaves the machine, an MCP server exposing retrieval directly to coding agents, and a retrieval-evaluation harness (hit@k, MRR, nDCG) that turns a tuning change into a measured before/after instead of a guess. Deployed publicly on Modal as a scale-to-zero chat demo — open-source on GitHub at alexrodrigues/minsky_ai.",
+    tags: ["Python", "RAG", "LanceDB", "tree-sitter", "MCP Protocol", "Eval Harness", "Modal"],
+    linkLabel: "Try the Live Demo",
+    linkHref: "https://alex-rodrigues-developer--minsky-chat-demo-minskychat-web.us-east.modal.run",
+  },
+  {
     title: "SafeMind",
     badge: "Founder & Engineer · Live Product",
     status: "status: online",
@@ -222,6 +240,14 @@ export const projects: ProjectEntry[] = [
     tags: ["Next.js", "Tailwind CSS", "Firebase", "Firestore"],
     linkLabel: "Visit safemind.app.br",
     linkHref: "https://safemind.app.br",
+  },
+  {
+    title: "MeuBus SP",
+    badge: "Solo Mobile Build",
+    status: "status: active",
+    description:
+      "A Flutter bus-tracking app for São Paulo commuters, built and run solo end-to-end: BLoC/Cubit state management, dependency injection, real-time geolocation on Google Maps pulling live data from the city's public transit API, offline-first persistence via Hive so routes and stops stay usable without a connection, and its own Node.js API — no backend or platform team behind it.",
+    tags: ["Flutter", "BLoC", "Real-time Geolocation", "Hive (Offline-First)", "Node.js API"],
   },
   {
     title: "DroidPokedex",

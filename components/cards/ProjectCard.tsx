@@ -27,15 +27,17 @@ export function ProjectCard({ project }: { project: ProjectEntry }) {
             </span>
           ))}
         </div>
-        <a
-          href={project.linkHref}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 font-code text-code-sm text-primary-container hover:underline"
-        >
-          <span>{project.linkLabel}</span>
-          <span className="material-symbols-outlined text-sm">open_in_new</span>
-        </a>
+        {project.linkHref && (
+          <a
+            href={project.linkHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 font-code text-code-sm text-primary-container hover:underline"
+          >
+            <span>{project.linkLabel}</span>
+            <span className="material-symbols-outlined text-sm">open_in_new</span>
+          </a>
+        )}
       </div>
     </div>
   );
