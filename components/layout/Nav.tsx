@@ -24,18 +24,6 @@ export function Nav() {
             </a>
           ))}
         </nav>
-
-        <div className="flex items-center space-x-4">
-          <div className="hidden items-center space-x-2 rounded-full border border-outline-variant/50 bg-surface-container-low px-2.5 py-1 sm:flex">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-tertiary opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-tertiary" />
-            </span>
-            <span className="font-label text-label-sm uppercase tracking-wide text-tertiary">
-              {nav.openToWork}
-            </span>
-          </div>
-        </div>
       </div>
     </header>
   );

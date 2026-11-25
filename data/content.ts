@@ -98,7 +98,9 @@ export const hero: HeroContent = {
       { label: "AST Chunking", meta: "tree-sitter", dotColor: "text-primary-container" },
       { label: "Local Embeddings", meta: "0 leaks // airgapped", dotColor: "text-primary" },
       { label: "Vector Search (LanceDB)", meta: "cosine-sim", dotColor: "text-[#f59e0b]" },
-      { label: "LLM Agent via MCP", meta: "tool-call", dotColor: "text-[#a855f7]" },
+      { label: "Multi-Agent Orchestration (MCP)", meta: "parallel tool-calls", dotColor: "text-[#a855f7]" },
+      { label: "Eval Harness", meta: "hit@k · MRR · nDCG", dotColor: "text-[#22c55e]" },
+      { label: "Production RAG System (Modal)", meta: "scale-to-zero", dotColor: "text-[#38bdf8]" },
     ],
     telemetry: "hit@10 94.2% · MRR 0.88 · 0 bytes leaked",
   },
@@ -122,7 +124,15 @@ export const about: AboutContent = {
     {
       index: "01",
       title: "AI / Retrieval",
-      tags: ["RAG", "Vector Search (LanceDB)", "MCP", "LLM Agents", "Python", "Eval (hit@k / MRR)"],
+      tags: [
+        "RAG",
+        "Multi-Agent Architecture",
+        "Vector Search (LanceDB)",
+        "MCP",
+        "Production RAG Deployment",
+        "Python",
+        "Eval (hit@k / MRR / nDCG)",
+      ],
     },
     {
       index: "02",
@@ -222,12 +232,20 @@ export const experience: ExperienceEntry[] = [
 
 export const projects: ProjectEntry[] = [
   {
-    title: "Minsky",
+    title: "Minsky AI",
     badge: "Open-Source RAG Engine · Live Demo",
     status: "status: online",
     description:
       "A local-first RAG engine designed and built end-to-end: AST-aware chunking (tree-sitter) across a dozen languages, an embedded vector store (LanceDB) over local embeddings so no source code ever leaves the machine, an MCP server exposing retrieval directly to coding agents, and a retrieval-evaluation harness (hit@k, MRR, nDCG) that turns a tuning change into a measured before/after instead of a guess. Deployed publicly on Modal as a scale-to-zero chat demo — open-source on GitHub at alexrodrigues/minsky_ai.",
-    tags: ["Python", "RAG", "LanceDB", "tree-sitter", "MCP Protocol", "Eval Harness", "Modal"],
+    tags: [
+      "Python",
+      "RAG",
+      "LanceDB",
+      "tree-sitter",
+      "MCP Protocol",
+      "Eval Harness (hit@k / MRR / nDCG)",
+      "Production Deployment (Modal)",
+    ],
     linkLabel: "Try the Live Demo",
     linkHref: "https://alex-rodrigues-developer--minsky-chat-demo-minskychat-web.us-east.modal.run",
   },
@@ -254,8 +272,8 @@ export const projects: ProjectEntry[] = [
     badge: "Open-Source Tooling",
     status: "status: active",
     description:
-      "An autonomous Python agent that intercepts pull requests, analyzes architectural git diffs with RAG/LLM, and dynamically generates ready-to-use Maestro YAML UI tests for newly detected surface areas in an Android codebase.",
-    tags: ["GitHub Actions", "Python", "OpenAI API", "RAG", "Maestro"],
+      "A real multi-agent architecture, not a single do-everything script: two independent Python agents run in parallel CI jobs on every pull request. One (pr_reviewer.py) analyzes architectural git diffs with RAG/LLM and posts review comments; the other (maestro_generator.py) dynamically generates ready-to-use Maestro YAML UI tests for newly detected surface areas in an Android codebase.",
+    tags: ["Multi-Agent Architecture", "GitHub Actions", "Python", "OpenAI API", "RAG", "Maestro"],
     linkLabel: "View Repository",
     linkHref: "https://github.com/alexrodrigues/droidpokedex",
   },
@@ -329,5 +347,4 @@ export const nav = {
     { label: "// 03 projects", href: "#projects" },
     { label: "// 04 contact", href: "#contact" },
   ],
-  openToWork: "Open to work",
 };
